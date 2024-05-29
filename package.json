@@ -49,6 +49,7 @@
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.4.5",
     "dotenv-cli": "^7.4.2",
+    "http-proxy-middleware": "^3.0.0",
     "kafkajs": "^2.2.4",
     "morgan": "^1.10.0",
     "nest-aws-sdk": "^3.0.1",

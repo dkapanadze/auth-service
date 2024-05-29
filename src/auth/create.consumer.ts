@@ -7,15 +7,15 @@ export class CreateConsumer implements OnModuleInit {
   constructor(private readonly createConsumer: ConsumerService) {}
 
   onModuleInit() {
-    this.createConsumer.consume('create-client', 'user_create', {
-      eachMessage: async ({ topic, partition, message }) => {
-        console.log({
-          source: 'create-consumer',
-          message: message.value.toString(),
-          partition: partition.toString(),
-          topic: topic.toString(),
-        });
-      },
-    });
+    // this.createConsumer.consume('create-client', 'user_create', {
+    //   eachMessage: async ({ topic, partition, message }) => {
+    //     console.log({
+    //       source: 'create-consumer',
+    //       message: message.value.toString(),
+    //       partition: partition.toString(),
+    //       topic: topic.toString(),
+    //     });
+    //   },
+    // });
   }
 }

@@ -1,5 +1,4 @@
 import { Module } from '@nestjs/common';
-import { ClientsModule, Transport } from '@nestjs/microservices';
 import { ConsumerService } from './consumer.service';
 import { ProducerService } from './producer.service';
 

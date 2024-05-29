@@ -14,6 +14,8 @@ import { LoggerModule } from './logger/logger.module';
 import { AwsSdkModule } from 'nest-aws-sdk';
 import { MediaModule } from './media/media.module';
 import { KafkaModule } from './kafka/kafka.module';
+import { ProxyModule } from './proxy/proxy.module';
+import { ProxyController } from './proxy/proxy.controller';
 
 const envFilePath =
   process.env.NODE_ENV === 'test' ? '.env.test' : '.env.development';
@@ -74,14 +76,15 @@ const envFilePath =
       },
       services: [S3],
     }),
-    UsersModule,
+    // UsersModule,
     KafkaModule,
     AuthModule,
     CronModule,
     LoggerModule,
     MediaModule,
+    ProxyModule,
   ],
-  controllers: [AppController],
   providers: [AppService],
+  controllers: [ProxyController],
 })
 export class AppModule {}
