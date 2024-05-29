@@ -9,6 +9,15 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+
+     env:  
+      DB_HOST: database-1.crmqwukkkrmp.us-east-1.rds.amazonaws.com
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      DB_PASSWORD: postgres
+      DB_DATABASE: postgres
+      DB_TYPE: postgres
+      DB_PORT: 5432
     steps:
       - name: Checkout
         uses: actions/checkout@v2
