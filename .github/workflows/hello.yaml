@@ -19,18 +19,11 @@ jobs:
       - name: Install Dependencies
         run: npm ci
       - name: Run Tests
-          env:
-            DB_DATABASE: ${{ secrets.DB_DATABASE }}
-            DB_HOST: ${{ secrets.DB_HOST }}
-            DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-            DB_PORT: ${{ secrets.DB_PORT }}
-            DB_TYPE: ${{ secrets.DB_TYPE }}
-            DB_USERNAME: ${{ secrets.DB_USERNAME}}
-          run: npm run test:e2e
-
-
-
-
-
-
-
+        env:
+          DB_DATABASE: ${{ secrets.DB_DATABASE }}
+          DB_HOST: ${{ secrets.DB_HOST }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          DB_PORT: ${{ secrets.DB_PORT }}
+          DB_TYPE: ${{ secrets.DB_TYPE }}
+          DB_USERNAME: ${{ secrets.DB_USERNAME}}
+        run: npm run test:e2e
