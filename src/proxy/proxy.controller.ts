@@ -15,7 +15,7 @@ export class ProxyController {
     );
     userServiceProxy(req, res);
   }
-
+  // test
   @All('/product/*')
   handleProductService(@Req() req: Request, @Res() res: Response) {
     const productServiceProxy = this.proxyService.createProxy(
