@@ -12,6 +12,7 @@ export class ProxyController {
     const userServiceProxy = this.proxyService.createProxy(
       process.env.USER_SERVICE_URL,
       { '^/': '' },
+      //   t
     );
     userServiceProxy(req, res);
   }
