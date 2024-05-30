@@ -20,7 +20,7 @@ import { ProducerService } from './producer.service';
     // ]),
   ],
   controllers: [],
-  providers: [ConsumerService, ProducerService],
-  exports: [ConsumerService, ProducerService],
+  // providers: [ConsumerService, ProducerService],
+  // exports: [ConsumerService, ProducerService],
 })
 export class KafkaModule {}

@@ -77,7 +77,7 @@ const envFilePath =
       services: [S3],
     }),
     // UsersModule,
-    KafkaModule,
+    // KafkaModule,
     AuthModule,
     CronModule,
     LoggerModule,

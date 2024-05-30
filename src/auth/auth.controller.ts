@@ -33,7 +33,7 @@ export class AuthController {
   constructor(
     private readonly authService: AuthService,
     private readonly userService: UsersService,
-    private readonly producerService: ProducerService,
+    // private readonly producerService: ProducerService,
   ) {}
 
   @Post('/local/signup')
@@ -55,10 +55,10 @@ export class AuthController {
     const { cookie, token } =
       await this.authService.getCookieWithJwtRefreshToken(user.id);
 
-    this.producerService.produce({
-      topic: 'user_create',
-      messages: [{ value: JSON.stringify(user) }],
-    });
+    // this.producerService.produce({
+    //   topic: 'user_create',
+    //   messages: [{ value: JSON.stringify(user) }],
+    // });
 
     request.res.setHeader('Set-Cookie', [accessCookie, cookie]);
 

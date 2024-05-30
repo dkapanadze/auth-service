@@ -7,9 +7,8 @@
   "license": "UNLICENSED",
   "scripts": {
     "build:prod": "npm run build",
-    "build": "tsc",
+    "build": "nest build",
     "start:debug": "nodemon",
-    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "ts-node ./srs/main.ts",
     "start:dev": "cross-env NODE_ENV=development nest start --watch",
     "start:prod": "npm run db:migration:run && node dist/src/main.js",

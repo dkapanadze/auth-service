@@ -9,7 +9,7 @@ import { JwtStrategy, RefreshStrategy } from './strategies';
 import { UsersService } from '../users/users.service';
 import { LoggerService } from '../logger/logger.service';
 import { KafkaModule } from 'src/kafka/kafka.module';
-import { CreateConsumer } from './create.consumer';
+// import { CreateConsumer } from './create.consumer';
 
 @Module({
   imports: [
@@ -33,7 +33,7 @@ import { CreateConsumer } from './create.consumer';
     JwtStrategy,
     RefreshStrategy,
     // ProducerService,
-    CreateConsumer,
+    // CreateConsumer,
     LoggerService,
   ],
   controllers: [AuthController],
