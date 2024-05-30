@@ -10,7 +10,7 @@ import * as fs from 'fs';
 import * as morgan from 'morgan';
 
 const logStream = fs.createWriteStream('./api.log', { flags: 'a' });
-
+// t
 dotenv.config();
 
 export const kafkaClientOptions: KafkaOptions = {
