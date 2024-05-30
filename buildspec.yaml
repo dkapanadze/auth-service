@@ -23,3 +23,4 @@ phases:
 artifacts:
   files:
     - '**/*'
+  name: buildArtifact
