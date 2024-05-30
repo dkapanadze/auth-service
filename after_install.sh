@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Replace "artifact.zip" with the actual name of your artifact zip file
-ARTIFACT="buildArtifact.zip"
+ARTIFACT="my-nest-project-44444/buildArtifact/dist"
 APP_DIR="/home/ubuntu/nestsj-api"
 
 # Transfer the artifact zip file to the EC2 instance

@@ -2,9 +2,9 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/nestsj-api
+    destination: /home/ubuntu/nestjs-api
 permissions:
-  - object: /home/nestsj-api
+  - object: /home/ubuntu/nestsj-api
     pattern: '**'
     owner: ubuntu
     group: ubuntu
