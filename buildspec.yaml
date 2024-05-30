@@ -11,7 +11,7 @@ phases:
   pre_build:
     commands:
       - echo Installing source yarn dependencies...
-      - npm install
+      # - npm install
   build:
     commands:
       - echo Build started on `date`
@@ -21,4 +21,4 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - '**/*'
+    - 'test.text'
