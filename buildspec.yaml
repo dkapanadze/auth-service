@@ -24,5 +24,3 @@ artifacts:
   files:
     - '**/*'
   name: buildArtifact
-  base-directory: build_output/
-  discard-paths: yes
