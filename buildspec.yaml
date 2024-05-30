@@ -14,8 +14,8 @@ phases:
       # - npm install
   build:
     commands:
-      - echo Build started on `date`
-      # - npm run build
+      - ls -la # List all files in the current directory
+      - pwd
   post_build:
     commands:
       - echo Build completed on `date`
