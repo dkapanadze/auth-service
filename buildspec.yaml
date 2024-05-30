@@ -23,3 +23,5 @@ phases:
 artifacts:
   files:
     - '**/*'
+  name: buildArtifact
+  discard-paths: yes
