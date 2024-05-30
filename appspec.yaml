@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/nestsj-api
+permissions:
+  - object: /home/nestsj-api
+    pattern: '**'
+    owner: ubuntu
+    group: ubuntu
+hooks:
+  AfterInstall:
+    timeout: 300
+    runas: ubuntu
