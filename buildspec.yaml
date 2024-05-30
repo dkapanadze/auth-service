@@ -14,11 +14,10 @@ phases:
       # - npm install
   build:
     commands:
-      - ls -la # List all files in the current directory
-      - pwd
+      - echo Build started on `date`
   post_build:
     commands:
       - echo Build completed on `date`
 artifacts:
   files:
-    - 'test.text'
+    - '**/*'
