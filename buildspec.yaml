@@ -22,3 +22,6 @@ phases:
 artifacts:
   files:
     - '**/*'
+  name: buildProject.zip
+  discard-paths: yes
+  base-directory: dist
