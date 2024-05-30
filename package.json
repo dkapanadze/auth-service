@@ -7,7 +7,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "build:prod": "npm run build",
-    "build": "nest build",
+    "build": "tsc",
     "start:debug": "nodemon",
     "start": "ts-node ./srs/main.ts",
     "start:dev": "cross-env NODE_ENV=development nest start --watch",
