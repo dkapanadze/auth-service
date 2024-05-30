@@ -3,7 +3,6 @@ import { AppModule } from './app.module';
 import * as dotenv from 'dotenv';
 import * as cookieParser from 'cookie-parser';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
-import { MicroserviceOptions } from '@nestjs/microservices';
 import { AllExceptionsFilter } from './error-handling';
 import { KafkaOptions, Transport } from '@nestjs/microservices';
 import * as fs from 'fs';
