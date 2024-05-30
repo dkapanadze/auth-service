@@ -11,6 +11,7 @@ phases:
   pre_build:
     commands:
       - echo Installing source yarn dependencies...
+
   build:
     commands:
       - echo Build started on `date`
@@ -20,4 +21,4 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - 'dist/**/*'
+    - '**/*'
