@@ -24,6 +24,7 @@ export const kafkaClientOptions: KafkaOptions = {
     },
   },
 };
+// test
 async function bootstrap() {
   //add unhandled exception handler
   process.on('uncaughtException', (err) => {
