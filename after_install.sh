@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 # Replace "artifact.zip" with the actual name of your artifact zip file
 ARTIFACT="s3://my-nest-project-44444/test/buildProject.zip"
 APP_DIR="/home/ubuntu/nestsj-api"

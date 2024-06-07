@@ -41,7 +41,7 @@ async function bootstrap() {
     return req.hostname;
   });
   const app = await NestFactory.create(AppModule);
-
+  // test
   app.use(
     morgan(
       ':host :method  :url  :status :res[content-length] - :response-time ms',

@@ -22,6 +22,7 @@ phases:
       - rm -rf node_modules
       - cp appspec.yml dist/
       - cp after_install.sh dist/
+      - chmod +x after_install.sh
       - echo "Zipping dist directory"
       - cd dist
       - zip -r ../buildProject.zip * .[^.]*
