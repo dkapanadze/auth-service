@@ -23,6 +23,7 @@ phases:
   post_build:
     commands:
       - echo "Post-build steps"
+      - aws s3 cp dist s3://my-nest-project-44444/buildProject.zip --recursive
 
 artifacts:
   files:
