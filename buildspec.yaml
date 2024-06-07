@@ -5,23 +5,28 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
-      - echo "Started to build"
-      - echo node -v
-      - echo $NODE_ENV
+      - echo "Installing dependencies"
+      - npm install
   pre_build:
     commands:
-      - echo Installing source yarn dependencies...
-      - npm install
+      - echo "Pre-build steps"
   build:
     commands:
-      - echo Build started on `date`
+      - echo "Build started on `date`"
       - npm run build
+      - echo "Build completed on `date`"
+      - echo "Listing contents of dist directory"
+      - ls -la dist
+      - echo "Listing contents of current directory"
+      - ls -la
+      - rm -rf node_modules
   post_build:
     commands:
-      - echo Build completed on `date`
+      - echo "Post-build steps"
+
 artifacts:
   files:
     - '**/*'
   name: buildProject.zip
-  discard-paths: yes
+  discard-paths: no
   base-directory: dist
