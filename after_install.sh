@@ -16,7 +16,7 @@ aws s3 cp $ARTIFACT /tmp --recursive
 
 aws s3 cp s3://my-nest-project-44444/nestjs-key.pem /tmp
 
-chmod 400 tmp/nestjs-key.pem
+chmod 400 /tmp/nestjs-key.pem
 
 ssh -i /tmp/nestjs-key.pem ubuntu@ec2-54-205-124-72.compute-1.amazonaws.com << EOF
   # Navigate to the application directory
