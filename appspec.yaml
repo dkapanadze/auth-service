@@ -4,11 +4,12 @@ files:
   - source: /
     destination: /home/ubuntu/nestjs-api
 permissions:
-  - object: /home/ubuntu/nestsj-api
+  - object: /home/ubuntu/nestjs-api
     pattern: '**'
     owner: ubuntu
     group: ubuntu
 hooks:
   AfterInstall:
-    timeout: 300
-    runas: ubuntu
+    - location: after_install.sh
+      timeout: 300
+      runas: ubuntu

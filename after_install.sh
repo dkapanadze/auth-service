@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Replace "artifact.zip" with the actual name of your artifact zip file
-ARTIFACT="s3://my-nest-project-44444/buildArtifact/dist"
+ARTIFACT="s3://my-nest-project-44444/test"
 APP_DIR="/home/ubuntu/nestsj-api"
 
 # Transfer the artifact zip file to the EC2 instance
@@ -12,8 +12,11 @@ ssh -i ./nestjs-key.pem ubuntu@your-ec2-instance-ip << EOF
   # Navigate to the application directory
   cd $APP_DIR
 
-  # Move the artifact folder from /tmp to the application directory
-  mv /tmp/dist/* .
+  # Unzip the artifact
+  unzip /tmp/buildProject.zip -d $APP_DIR
+
+  # Remove the zip file after extraction
+  rm /tmp/buildProject.zip
 
   # Install dependencies
   npm install

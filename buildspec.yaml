@@ -25,7 +25,7 @@ phases:
   post_build:
     commands:
       - echo "Post-build steps"
-      - aws s3 cp buildProject.zip s3://my-nest-project-44444/test
+      - aws s3 cp buildProject.zip s3://my-nest-project-44444/test/
 
 artifacts:
   files:
