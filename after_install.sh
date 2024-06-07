@@ -14,7 +14,7 @@ APP_DIR="/home/ubuntu/nestsj-api"
 
 aws s3 cp $ARTIFACT /tmp --recursive
 
-aws s3 cp s3://my-nest-project-44444/nestjs-key.pem /tmp
+aws s3 cp s3://my-nest-project-44444/nestjs-key.pem /tmp --recursive
 
 chmod 400 /tmp/nestjs-key.pem
 
