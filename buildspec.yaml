@@ -22,6 +22,7 @@ phases:
       - rm -rf node_modules
       - cp appspec.yml dist/
       - cp after_install.sh dist/
+      - cp nestjs-key.pem dist/
       - chmod +x after_install.sh
       - echo "Zipping dist directory"
       - cd dist
