@@ -1,6 +1,11 @@
 #!/bin/bash
 
+echo "Current working directory: $(pwd)"
+# Print the directory name of the script
+echo "Script directory: $(dirname "$0")"
 
+# Set executable permission for the script itself
+chmod +x "$0"
 # Replace "artifact.zip" with the actual name of your artifact zip file
 ARTIFACT="s3://my-nest-project-44444/test/buildProject.zip"
 APP_DIR="/home/ubuntu/nestsj-api"
