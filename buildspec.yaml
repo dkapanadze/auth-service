@@ -20,14 +20,15 @@ phases:
       - echo "Listing contents of current directory"
       - ls -la
       - rm -rf node_modules
+      - echo "Zipping dist directory"
+      - zip -r buildProject.zip dist
   post_build:
     commands:
       - echo "Post-build steps"
-      - aws s3 cp dist s3://my-nest-project-44444/buildProject.zip --recursive
+      - aws s3 cp buildProject.zip s3://your-bucket-name
 
 artifacts:
   files:
     - '**/*'
   name: buildProject.zip
   discard-paths: no
-  base-directory: dist
