@@ -20,8 +20,12 @@ phases:
       - echo "Listing contents of current directory"
       - ls -la
       - rm -rf node_modules
+      - cp appspec.yml dist/
       - echo "Zipping dist directory"
-      - zip -r buildProject.zip dist
+      - cd dist
+      - zip -r ../buildProject.zip * .[^.]*
+      - cd ..
+
   post_build:
     commands:
       - echo "Post-build steps"

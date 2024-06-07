@@ -17,7 +17,7 @@ ssh -i ./nestjs-key.pem ubuntu@ec2-54-205-124-72.compute-1.amazonaws.com << EOF
 
   # Remove the zip file after extraction
   rm /tmp/buildProject.zip
-  cd dist
+
 
   # Install dependencies
   npm install
